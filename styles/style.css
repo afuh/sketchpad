@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rebeccapurple !important; }
+
+.sketch {
+  background: white;
+  width: 960px;
+  height: 960px;
+  margin: 50px auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+
+.square {
+  background: transparent;
+  width: 240px;
+  height: 240px;
+  margin: 0;
+  float: left;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%; }
+
+.square-hover {
+  background: black;
+  opacity: 0; }
+
+/*# sourceMappingURL=style.css.map */
