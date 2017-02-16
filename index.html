@@ -7,21 +7,24 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet prefetch">
     <link href="styles/style.css" type="text/css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet prefetch">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
   </head>
+
   <body>
-    <!--
-    <div class="panel">
-      <button class="reset">reset grid</button>
-      <form>
-        <input type="number" placeholder="32">
-      </form>
+
+    <div id="panel">
+      <button id="toggleMenu">Menu</button>
+        <div id="menu">
+          <input id="rowsColumns" type="number" min="0" placeholder="32">
+          <button onclick="userCanvas()">Go!</button>
+          <button onclick="rainbow()" id="rainbow">Rainbow!</button>
+          <button onclick="blackWhite()" id="blackWhite">Black & white</button>
+        </div>
     </div>
-    -->
-    <div class="sketch"></div>
+
+    <div id="sketch"></div>
 
   </body>
 </html>

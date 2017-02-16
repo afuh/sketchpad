@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rebeccapurple !important; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -5,17 +17,28 @@
   list-style-type: none;
   text-decoration: none; }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rebeccapurple !important; }
+#panel {
+  background: transparent;
+  margin: 30px auto;
+  width: 100%;
+  text-align: center; }
 
-.sketch {
+#rowsColumns {
+  width: 46px;
+  text-align: center; }
+
+#menu {
+  display: inline-block; }
+
+#sketch {
   background: white;
   width: 960px;
   height: 960px;
-  margin: 50px auto;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px; }
 
 .square {
   background: transparent;
