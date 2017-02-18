@@ -1,0 +1,55 @@
+#panel
+  background: transparent
+  margin: 20px auto
+  width: 100%
+  text-align: center
+
+#menu
+  display: inline-block
+  width: 960px
+
+button, input
+  +border-radius(5px)
+  background: whitesmoke
+  border: 1px solid black
+  box-shadow: 3px 3px 0 1px rgba(black, 0.4)
+  width: 100px
+  height: auto
+  transition: box-shadow 0.2s ease-out
+  &:focus
+    outline: none
+  &:hover
+    box-shadow:  3px 3px 0 1px rgba(black, 1)
+  &:active
+    box-shadow:  inset 3px 3px 0 1px rgba(black, 1)
+
+#inputBox
+  padding: 2px 6px 3px 6px
+  height: 42px
+  text-align: center
+    //~ #go
+      background: #37a73c
+      color: white
+.reset
+  position: relative
+  float: left
+  button
+    background-color: green
+    color: white
+    width: auto
+
+.message
+  z-index: -1000
+  position: fixed
+  background: transparent
+  width: 560px
+  height: auto
+  p
+    color: white
+    transform: rotate(-2deg)
+    opacity: 0
+    text-shadow: black 2px 2px
+
+.rightBar
+  position: relative
+  float: right

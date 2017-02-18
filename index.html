@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet prefetch">
-    <link href="styles/style.css" type="text/css" rel="stylesheet">
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
@@ -15,12 +15,19 @@
   <body>
 
     <div id="panel">
-      <button id="toggleMenu">Menu</button>
         <div id="menu">
-          <input id="rowsColumns" type="number" min="0" placeholder="32">
-          <button onclick="userCanvas()">Go!</button>
-          <button onclick="rainbow()" id="rainbow">Rainbow!</button>
-          <button onclick="blackWhite()" id="blackWhite">Black & white</button>
+          <div class="reset">
+            <input id="inputBox" type="number" placeholder="...">
+            <button onclick="userCanvas()" id="go">Go!</button>
+          </div>
+          <div class="message">
+            <p id="nop">pst... between 1 and 100</p>
+          </div>
+          <div class="rightBar">
+            <button onclick="rainbow()" id="rainbow">Rainbow</button>
+            <button onclick="shape()" id="shape" value="1">Shape</button>
+            <button onclick="resetCanvas()">Reset</button>
+          </div>
         </div>
     </div>
 
