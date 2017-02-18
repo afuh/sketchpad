@@ -2,11 +2,9 @@ var userInput = 64,
     color;
 
 $(document).ready(function(){
-  $("#blackWhite").hide();
-  $("#go").hide();
-  color = false;
   canvas();
   paint();
+  color = false;
 });
 
 //populate the canvas
@@ -23,17 +21,14 @@ var canvas = function() {
 // Painting & opacity
 var paint = function() {
   $(".square").mouseenter(function(){
-              $(this).addClass("square-hover");
-              $(this).css("opacity") <= 0.9 ? $(this).css("opacity", "+=0.1") : $(this).css("opacity", "1");
-
-              // TODO: spider $(this).fadeTo(400, 0);
-
-              }); 
+    $(this).addClass("square-hover");
+    $(this).css("opacity") <= 0.9 ? $(this).css("opacity", "+=0.1") : $(this).css("opacity", "1");
+  });
 };
 
 //change the amount of pixels
 var userCanvas = function(){
-  if (+$("#inputBox").val() <= 100 && +$("#inputBox").val() > 0) {
+  if (+$("#inputBox").val() <= 100 && +$("#inputBox").val() > 1) {
     userInput = $("#inputBox").val();
     $("#canvas").remove();
     canvas();
@@ -56,7 +51,17 @@ var userCanvas = function(){
   }
 };
 
-//Color and B&W
+// go button
+$(function() {
+  $("input").mousedown(function(){
+      $("#go").fadeIn("fast");
+  });
+    $("#go").click(function(){
+      $(this).fadeOut("fast");
+    });
+});
+
+//Rainbow and B&W
 var rainbow = function(b) {
   if (!color || b) {
     color = true;
@@ -78,6 +83,18 @@ var rainbow = function(b) {
   }
 };
 
+//shape
+var shape = function(b) {
+  if (+$("#shape").val() == 1 || b) {
+    $("#shape").val(0);
+    $(".square").addClass("roundPixel").removeClass("squarePixel");
+  }
+  else {
+    $("#shape").val(1);
+    $(".square").addClass("squarePixel").removeClass("roundPixel");
+  }
+};
+
 //reset canvas
 var resetCanvas = function(){
   $("#canvas").remove();
@@ -94,36 +111,3 @@ var resetCanvas = function(){
     shape(true);
   }
 };
-
-// go button
-$(function() {
-  $("input").mousedown(function(){
-      $("#go").fadeIn("fast");
-  });
-    $("#go").click(function(){
-      $(this).fadeOut("fast");
-    });
-});
-
-//shape
-var shape = function(b) {
-  if (+$("#shape").val() == 1 || b) {
-    $("#shape").val(0);
-    $(".square").addClass("roundPixel").removeClass("squarePixel");
-  }
-  else {
-    $("#shape").val(1);
-    $(".square").addClass("squarePixel").removeClass("roundPixel");
-  }
-};
-
-
-/*
-var pete = function() {
-    $("#sketch").fadeTo(2000, 0.6, function(){
-      $("#sketch").fadeTo(4000, 1);
-      return pete();
-    });
-};
-pete();
-*/
